@@ -1,0 +1,140 @@
+
+/*REGLAS GENERALES*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    position: fixed;
+    z-index: +1;
+    top: 0;
+    right: 0;
+    background-color: $color-seis;
+    border-radius: 20px;
+    height: 50px;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @media screen and (max-width: 768px){
+        justify-content: space-between;
+        width: 85%;
+        align-items: center;
+        border-radius: 10px;
+        height: 4%;
+        right:auto;
+        left: 6%;
+        
+    }
+    @media screen and (max-width: 576px){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 85%;
+        align-items: center;
+        border-radius: 10px;
+        margin: 0 auto;
+        height: 4%;
+        right: auto;
+        left: 7%;
+    }
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Gabriela, 'Open Sans', sans-serif; 
+    background: rgb(220,229,226);
+    background: linear-gradient(0deg, rgba(220,229,226,1) 10%, rgba(72,122,41,1) 61%, rgba(41,78,10,1) 100%);
+}
+
+footer{
+    background-color: $color-footer1;
+    padding: 80px;
+    font-size: 20px;
+    border-top: 5px $color-footer2 solid;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+    @media screen and (max-width: 768px){
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        font-size: 15px;
+    }
+    @media screen and (max-width: 576px){
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        font-size: 15px;
+    }
+}
+
+a{
+        color: $color-letras1;
+        text-decoration: none;
+    &:hover{
+        border-bottom: 3px solid $color-a1;
+        color: $color-a2;
+        cursor:pointer;
+        font-weight: bold;
+    }
+    &:focus{
+        border-bottom: 5px solid;
+    }
+    &:active{
+        background: $color-a2;
+        color: $color-a3;
+    }
+}
+
+p{
+    color: $color-letras1;
+    font-size: 15px;
+    @media screen and (max-width: 768px){
+        text-align: center;
+    }
+}
+
+h1{
+   padding: 30px; 
+   font-size: 50px;  
+   @media screen and (max-width: 768px){
+       padding: 0%;   
+       font-size: 30px; 
+    }
+    @media screen and (max-width: 576px){
+        padding: 0%;
+        font-size: 30px; 
+    }
+}
+
+h3{
+   background-color: $color-dos;
+   color: $color-tres;
+   padding: 5px;
+   letter-spacing: 4px;
+   border-radius: 50% 20% / 10% 40%;
+   font-size: 30px;
+}
+
+h4{
+   background-color: $color-uno;
+   color: $color-letras1;
+   font-style:oblique;
+   letter-spacing: 2px;
+   padding: 20px;
+   border-radius: 3px;
+}
+
+.logo1{
+    @media screen and (max-width: 768px){
+        display: none;
+    }
+}

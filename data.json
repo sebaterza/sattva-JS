@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "nombre": "Velas",
+    "precio": 50,
+    "img": "./material-grafico/velas.jpg",
+    "cantidad": 1
+  },
+  {
+    "id": 2,
+    "nombre": "Resinas",
+    "precio": 40,
+    "img": "./material-grafico/resina.jpg",
+    "cantidad": 1
+  },
+  {
+    "id": 3,
+    "nombre": "Inciensos",
+    "precio": 80,
+    "img": "./material-grafico/incienso.jpg",
+    "cantidad": 1
+  },
+  {
+    "id": 4,
+    "nombre": "Cuencos",
+    "precio": 450,
+    "img": "./material-grafico/cuencos.jpg",
+    "cantidad": 1
+  },
+  {
+    "id": 5,
+    "nombre": "Sahumos",
+    "precio": 100,
+    "img": "./material-grafico/sahumo.jpg",
+    "cantidad": 1
+  },
+  {
+    "id": 6,
+    "nombre": "Cristales",
+    "precio": 200,
+    "img": "./material-grafico/cristales-gemas.jpg",
+    "cantidad": 1
+  },
+  {
+    "id": 7,
+    "nombre": "Cartas",
+    "precio": 300,
+    "img": "./material-grafico/cartas.jpg",
+    "cantidad": 1
+  },
+  {
+    "id": 8,
+    "nombre": "Libros",
+    "precio": 500,
+    "img": "./material-grafico/libros.jpg",
+    "cantidad": 1
+  },
+  {
+    "id": 9,
+    "nombre": "Productos de limpieza",
+    "precio": 150,
+    "img": "./material-grafico/limpieza-personal.jpg",
+    "cantidad": 1
+  }
+]

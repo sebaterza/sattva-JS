@@ -1,0 +1,834 @@
+@import "./base/variables.scss";
+@import "./base/maps";
+@import "./base/mixin";
+@import "./base/extend";
+@import "./componentes/global.scss";
+
+
+//*INDEX*//
+
+.section1{
+    padding-bottom: 10%;
+    @media screen and (max-width: 768px){
+        padding-bottom: 0;
+    }
+    @media screen and (max-width: 576px){
+        padding-bottom: 0;
+    }
+    
+    #videoPrincipal{
+        width: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        position: absolute;
+        z-index: -1;
+     }
+
+     .logoPrincipal{
+            margin-left: 35%;
+            margin-top: 10%;
+            transition: all 1s !important;
+         &:hover{
+            transform: scale(1.05) !important;
+        }
+        @media screen and (max-width: 768px){
+            margin-top: 80px;
+            margin-bottom: 450px;
+            margin-left: 10%;
+            width: 80%;
+            height: 29.2%;
+        }
+        @media screen and (max-width: 576px){
+            margin-top: 80px;
+            margin-bottom: 450px;
+            margin-left: 10%;
+            width: 80%;
+            height: 29.2%;
+        }
+     }
+
+     .johnmu{
+             padding-bottom: 40px;
+             background-color: transparent;
+             font-size: calc(0.8em + 0.8vw);    
+             color: $color-tres;
+             text-align: center;
+             margin-top: 23%;
+             transition: all 1s;
+         &:hover{
+             transform: translate(0px, -20px);
+         }
+         @media screen and (max-width: 768px){
+             padding-bottom: 5px;
+             background-color: transparent;
+             font-size: calc(1.2em + 1.2vw);    
+             color: white;
+             text-align: center;
+             margin-top: 1%;
+             margin-bottom: 80px;
+             margin-left: 20px;
+             margin-right: 20px;
+         }
+         @media screen and (max-width: 576px){
+             padding-bottom: 5px;
+             background-color: transparent;
+             font-size: calc(1.2em + 1.2vw);    
+             color: white;
+             text-align: center;
+             margin-top: 1%;
+             margin-bottom: 80px;
+         }
+     }
+}
+
+.section2{
+    
+    .imgIndex{
+        @media screen and (max-width: 768px){
+            width: 100%;
+            height: 100%;
+        }
+        @media screen and (max-width: 576px){
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    display: map-get($s23-index , display23);
+    
+    padding: map-get($s23-index , padd23);
+
+    grid-column-gap: map-get($s23-index , column23);
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "artId artSent artVal"
+    ;
+    @media screen and (max-width: 768px){
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+        grid-template-areas:
+        "artId" 
+        "artSent"
+        "artVal"
+        ;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 15px;
+    }
+    @media screen and (max-width: 576px){
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+        grid-template-areas:
+        "artId" 
+        "artSent"
+        "artVal"
+        ;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 15px;
+    }
+}
+
+.section3{
+
+    display: map-get($s23-index , display23);
+    
+    padding: map-get($s23-index , padd23);
+
+    grid-column-gap: map-get($s23-index , column23);
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-areas:
+    "hFundam hFundam hFundam"
+    "artAyur artReik artBam"
+    ;
+    @media screen and (max-width: 768px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "hFundam"
+        "artAyur" 
+        "artReik" 
+        "artBam"
+        ;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    @media screen and (max-width: 576px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "hFundam"
+        "artAyur" 
+        "artReik" 
+        "artBam"
+        ;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hFundamentos{
+    
+        @extend %flex-repeat;
+
+        grid-area: hFundam;
+        border: 10px solid $color-uno;
+        background-color: $color-uno;
+        margin-bottom: 20px;
+        transition: all 1s;
+        
+        &:hover{
+            animation: fondosFundam 10s;
+        }
+
+        @media screen and (max-width: 768px){
+            h1{
+                text-align: center;
+            }
+         }
+         @media screen and (max-width: 576px){
+            h1{
+                text-align: center;
+            }
+         }
+    }
+}
+
+@keyframes fondosIndex{
+    50%{
+        background-color: $color-transicion1;
+    }
+}
+
+@keyframes fondosFundam {
+    20%{
+        background-color: $color-dos;
+    }
+}
+
+.articulo{
+
+        @extend %flex-repeat;
+
+        border: 10px solid $color-articulo;
+        background-color: $color-uno;
+        border-radius: 7px;
+        padding: 10px;
+        transition: all 1s;
+    img{
+        max-width: 100%;
+        object-fit: cover;
+        height: 400px;
+        padding-bottom: 10px;
+    }
+}
+
+.aIdentidad{
+        grid-area: artId;
+    &:hover{
+        transform: scale(1.02);
+        animation: fondosIndex 10s;
+    }
+}
+
+.aSentido{
+        grid-area: artSent;
+    &:hover{
+        transform: scale(1.02);
+        animation: fondosIndex 10s;
+    }
+}
+
+.aValores{
+        grid-area: artVal;
+    &:hover {
+        transform: scale(1.02);
+        animation: fondosIndex 10s; 
+    }
+}
+
+.aAyurveda{
+        grid-area: artAyur;
+    &:hover{
+        transform: scale(1.02);
+        animation: fondosIndex 10s;
+    }
+}
+
+.aReiki{
+        grid-area: artReik;
+    &:hover{
+        transform: scale(1.02);
+        animation: fondosIndex 10s;
+    }
+}
+
+.aBambu{
+        grid-area: artBam;
+    &:hover{
+        transform: scale(1.02);
+        animation: fondosIndex 10s;
+    }
+}
+
+.contacto{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 5%;
+    font-size: 44px;
+    color: #FFFF;
+    background-color:  $color-contacto;
+
+    
+    @media screen and (max-width: 768px){
+        display: flex;
+        justify-content: center;
+    }
+    @media screen and (max-width: 576px){
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.sectionContacto{
+    @include flex-repeat2;
+
+    margin: 1%;
+
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+    @media screen and (max-width: 576px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .info{
+        padding-top: 50px;
+        padding-left: 50px;
+        background-color: $color-info;
+        font-size: 30px;
+        @media screen and (max-width: 768px){
+            display: flex;
+            justify-content: center;
+            padding: 2px;
+            background-color: #dce5e2;
+            font-size: 30px;
+        }
+        @media screen and (max-width: 576px){
+            display: flex;
+            justify-content: center;
+            padding: 2px;
+            background-color: #dce5e2;
+            font-size: 30px;
+        }
+    }
+    
+    .info2{
+        border-radius: 50% 20% / 10% 40%;
+        padding: 50px;
+        background-color: $color-uno;
+        font-size: 17px;
+        width: 70%;
+        line-height: 35px;
+        @media screen and (max-width: 768px){
+            background-color: #C5DFD6;
+            font-size: 15px;
+            padding: 10px;
+            width: 80%;
+        }
+        @media screen and (max-width: 576px){
+            background-color: #C5DFD6;
+            font-size: 15px;
+            padding: 10px;
+            width: 80%s;
+        }
+    }
+
+    .mapa{
+        border-radius: 14% 35% / 35% 14%;
+        padding: 50px;
+        width: 60%;
+        @media screen and (max-width: 768px){
+            padding: 50px;
+            width: 100%;
+        }
+        @media screen and (max-width: 576px){
+            padding: 50px;
+            width: 100%;
+        }
+    }
+
+    .iconoContacto{
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+    }
+} 
+
+
+/*SERVICIOS*/
+
+.section4{
+    margin: 7%;
+    background-color: $color-dos;
+    border-radius: 3%;
+    padding: 3%;
+
+    .plan{
+        color:$color-plan;
+        @media screen and (max-width: 768px){
+            padding-bottom: 30px;
+            padding-top: 50px;
+            font-size: 35px;
+            color:#dee4da;
+            align-items: center;
+        }
+        @media screen and (max-width: 576px){
+            padding-bottom: 30px;
+            padding-top: 50px;
+            font-size: 35px;
+            color:#dee4da;
+            align-items: center;
+        }
+
+        .planIntegral{
+            padding-bottom: 30px;
+            padding: 30px;
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            @media screen and (max-width: 768px){
+                font-size: 25px;
+                display: flex;
+                flex-direction: column;
+
+            }
+            @media screen and (max-width: 576px){
+                font-size: 20px;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    @media screen and (max-width: 768px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2%;
+        padding: 3%;
+    }
+    @media screen and (max-width: 576px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2%;
+        padding: 3%;
+    }
+}
+
+
+
+.actividades{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    color:$color-plan;
+    background-color: $color-dos;
+    font-size: 250%;
+    padding: 2%;
+    border-radius: 3%;
+    
+    @media screen and (max-width: 768px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        padding: 2%;
+        border-radius: 3%;
+    }
+    @media screen and (max-width: 576px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+        padding: 2%;
+        border-radius: 3%;
+    }
+}
+
+.section5{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "gReiki gGemas gMedita"
+    "gAkashi gAroma gMusico"
+    ;
+    grid-column-gap: 2%;       
+    grid-row-gap: 2%;
+    justify-content: center;
+    margin: 1%;
+    padding-bottom: 10%;
+
+    button{
+        font-size: 25px;
+        font-style: italic;
+        --bs-btn-bg: $color-button;
+        --bs-btn-border-color: white;
+        --bs-btn-hover-bg: #D0AEBB;
+        --bs-btn-hover-border-color: white;
+        --bs-btn-active-bg: #265301;
+        --bs-btn-active-border-color: $color-button; 
+        padding: 4px;
+    }
+    @media screen and (max-width: 768px){
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6 1fr);
+        grid-template-areas: 
+        "gReiki" 
+        "gGemas"
+        "gMedita"
+        "gAkashi" 
+        "gAroma" 
+        "gMusico"
+        ;
+        justify-content: center;
+        margin: 1%;
+        padding-bottom: 5px;
+        grid-column-gap: 20px;       
+        grid-row-gap: 20px;
+
+    }
+    @media screen and (max-width: 576px){
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6 1fr);
+        grid-template-areas: 
+        "gReiki" 
+        "gGemas"
+        "gMedita"
+        "gAkashi" 
+        "gAroma" 
+        "gMusico"
+        ;
+        justify-content: center;
+        margin: 1%;
+        padding-bottom: 5px;
+        grid-column-gap: 20px;       
+        grid-row-gap: 20px;
+    }
+}
+
+.sec5{
+    @extend %flex-repeat;
+
+    border: 3px solid $color-button;
+    background-color: $color-uno;
+    border-radius: 7px;
+    padding: 10px;
+
+    .dReiki{
+        grid-area: gReiki;
+    }
+
+    .dGemas{
+        grid-area: gGemas;
+    }
+    
+    .dMedita{
+        grid-area: gMedita;
+    }
+    
+    .dAkashi{
+        grid-area: gAkashi;
+    }
+    
+    .dAroma{
+        grid-area: gAroma;
+    }
+    
+    .dMusico{
+        grid-area: gMusico;
+    }
+    
+    @media screen and (max-width: 768px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        grid-gap: 10px;
+    }
+    @media screen and (max-width: 576px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        grid-gap: 10px;
+
+    }
+}
+
+/*PRODUCTOS*/
+
+.section6{
+
+    @include flex-repeat2;
+
+    .productos{
+        font-size: 50px;
+        background-color: $color-dos;
+        border: 10px solid $color-productos1;
+        width: 50%;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        border-radius: 50% 20% / 10% 40%;
+
+        a{
+            font-size: 40px;
+            background-color: #d4e2dd  ;
+        }
+        @media screen and (max-width: 768px){
+            font-size: 50px;
+            width: 80%;
+            padding: 2%;
+            margin: 10px;
+        }
+        @media screen and (max-width: 576px){
+            font-size: 50px;
+            width: 80%;
+            padding: 2%;
+            margin: 10px;
+        }
+    }
+    .bambooFondo{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        margin: 0%;
+        @media screen and (max-width: 768px){
+            display: none;
+        }
+        @media screen and (max-width: 576px){
+            display: none;
+        }
+    }
+    @media screen and (max-width: 768px){
+        margin-top: 20%;
+        padding-bottom: 30%;
+    }
+    @media screen and (max-width: 576px){
+        margin-top: 20%;
+        padding-bottom: 30%;
+    }
+}
+
+/*HOLISTICA*/
+
+.section7{
+    display: grid;
+    grid-template-columns: repet(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "vel res inci"
+    "cuenc sahu cris"
+    "cart libr limp"
+    ;
+    grid-column-gap: 2%;       
+    grid-row-gap: 2%;
+    justify-content: center;
+    margin: 1%;
+    padding-top: 7%;
+    padding-bottom: 10%;
+
+    .sec7{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 3px solid $color-plan;
+        background-color: $color-uno;
+        border-radius: 7px;
+        padding: 10px;
+                    
+        .velas{
+            grid-area: vel;
+        }
+
+        .resinas{
+            grid-area: res;
+        }
+
+        .inciensos{
+            grid-area: inci;
+        }
+
+        .cuencos{
+            grid-area: cuenc;
+        }
+
+        .sahumo{
+            grid-area: sahu;
+        }
+
+        .cristales{
+            grid-area: cris;
+        }
+        .cartas{
+            grid-area: cart;
+        }
+
+        .libros{
+            grid-area: libr;
+        }
+
+        .limpieza{
+            grid-area: limp;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        padding-top: 12%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas: 
+        "vel"
+        "res" 
+        "inci"
+        "cuenc" 
+        "sahu" 
+        "cris"
+        "cart" 
+        "libr" 
+        "limp"
+        ;
+        grid-column-gap: 1%;       
+        grid-row-gap: 0.5%;
+        padding-bottom: 40%;
+    }
+    @media screen and (max-width: 576px){
+        padding-top: 12%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas: 
+        "vel"
+        "res" 
+        "inci"
+        "cuenc" 
+        "sahu" 
+        "cris"
+        "cart" 
+        "libr" 
+        "limp"
+        ;
+        grid-column-gap: 1%;       
+        grid-row-gap: 0.5%;
+        padding-bottom: 40%;
+    }
+}
+
+/*COCINA*/
+
+.section8{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "espe mort acei"
+    "hierb plant ."
+    ;
+    grid-column-gap: 2%;       
+    grid-row-gap: 2%;
+    justify-content: center;
+    margin: 1%;
+    padding-top: 7%;
+    padding-bottom: 10%;
+    
+    .sec8{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 3px solid $color-button;
+        background-color: $color-uno;
+        border-radius: 7px;
+        padding: 10px;
+                
+        .especias{
+            grid-area: espe;
+        }
+
+        .morteros{
+            grid-area: mort;
+        }
+
+        .aceite{
+            grid-area: acei;
+        }
+
+        .hierbas{
+            grid-area: hierb;
+        }
+
+        .plantas{
+            grid-area: plant;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        .section8{
+            padding-top: 12%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 5;
+            grid-template-areas: 
+            "espe" 
+            "mort" 
+            "acei"
+            "hierb" 
+            "plant" 
+            ;
+            grid-column-gap: 2%;       
+            grid-row-gap: 0.5%;
+            justify-content: center;
+            margin: 1%;
+            padding-bottom: 40%;
+        }
+    }
+    @media screen and (max-width: 576px){
+        .section8{
+            padding-top: 12%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 5;
+            grid-template-areas: 
+            "espe" 
+            "mort" 
+            "acei"
+            "hierb" 
+            "plant" 
+            ;
+            grid-column-gap: 2%;       
+            grid-row-gap: 0.5%;
+            justify-content: center;
+            margin: 1%;
+            padding-bottom: 40%;
+        }
+    }
+}
+
